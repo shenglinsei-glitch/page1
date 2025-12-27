@@ -1,0 +1,272 @@
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>フォルダ一覧 - Word List</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "selected": "#53BEE8",     
+                        "selected-light": "#B2E3F4", 
+                        "text-main": "#5E5E5E",    
+                        "text-sub": "#C6CBD4",     
+                        "icon-col": "#53BEE8",     
+                        "icon-shadow": "#E5EBF2",  
+                        "background-light": "#F8FAFC", 
+                        "background-dark": "#101622",
+                        "danger": "#FF5B5B",
+                    },
+                    fontFamily: {
+                        "display": ["M PLUS Rounded 1c", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(229, 235, 242, 0.6)', 
+                        'glow': '0 8px 24px -4px rgba(83, 190, 232, 0.45)', 
+                        'sheet': '0 -4px 24px -4px rgba(0, 0, 0, 0.1)',
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] > summary .chevron-icon {
+            transform: rotate(90deg);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white relative">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto overflow-hidden shadow-2xl bg-background-light dark:bg-background-dark">
+<header class="sticky top-0 z-20 flex items-center justify-between px-4 py-3 bg-background-light/90 dark:bg-background-dark/95 backdrop-blur-md">
+<div class="flex items-center justify-start w-10">
+<button class="flex items-center justify-center rounded-full hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors p-1">
+<span class="material-symbols-outlined text-[24px] text-text-sub">settings</span>
+</button>
+</div>
+<div class="flex-1 text-center">
+</div>
+<div class="flex items-center justify-end w-10 relative">
+<details class="relative">
+<summary class="list-none flex items-center justify-center rounded-full hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors p-1 cursor-pointer">
+<span class="material-symbols-outlined text-[28px] text-icon-col">add</span>
+</summary>
+<div class="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700 overflow-hidden z-50">
+<button class="w-full text-left px-4 py-3 flex items-center gap-3 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">add</span>
+<span class="text-sm font-medium text-text-main dark:text-slate-200">単語を追加</span>
+</button>
+<div class="h-px bg-slate-100 dark:bg-slate-700"></div>
+<button class="w-full text-left px-4 py-3 flex items-center gap-3 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">upload_file</span>
+<span class="text-sm font-medium text-text-main dark:text-slate-200">一括インポート</span>
+</button>
+</div>
+</details>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto no-scrollbar pb-32 pt-2 pl-3 pr-0">
+<div class="flex flex-col gap-3">
+<details class="group">
+<summary class="flex items-center gap-3 px-5 py-5 bg-white/80 dark:bg-slate-900/40 backdrop-blur-sm rounded-l-3xl rounded-r-none shadow-[0_0_8px_1px_#E5EBF2] dark:shadow-none active:scale-[0.98] transition-all cursor-pointer dark:border dark:border-slate-800 select-none">
+<div class="flex-1 min-w-0">
+<span class="text-base font-medium text-text-main dark:text-slate-200">未整理</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-text-main/70 dark:text-slate-400/70">12</span>
+<span class="material-symbols-outlined text-icon-col text-[20px] transition-transform duration-300 chevron-icon">chevron_right</span>
+</div>
+</summary>
+<div class="py-2"></div>
+</details>
+<details class="group">
+<summary class="flex items-center gap-3 px-5 py-5 bg-white/80 dark:bg-slate-900/40 backdrop-blur-sm rounded-l-3xl rounded-r-none shadow-[0_0_8px_1px_#E5EBF2] dark:shadow-none active:scale-[0.98] transition-all cursor-pointer dark:border dark:border-slate-800 relative overflow-hidden select-none">
+<div class="flex-1 min-w-0">
+<span class="text-base font-medium text-text-main dark:text-slate-200">英語学習 (English)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-text-main/70 dark:text-slate-400/70">450</span>
+<span class="material-symbols-outlined text-icon-col text-[20px] transition-transform duration-300 chevron-icon">chevron_right</span>
+</div>
+</summary>
+<div class="py-2"></div>
+</details>
+<details class="flex flex-col gap-2 group" open="">
+<summary class="list-none [&amp;::-webkit-details-marker]:hidden flex items-center gap-3 px-5 py-5 rounded-l-3xl rounded-r-none bg-gradient-to-r from-selected to-selected-light shadow-glow transition-all cursor-pointer relative z-10 select-none">
+<div class="flex-1 min-w-0">
+<span class="text-base font-medium text-text-main dark:text-white">中国語 (Chinese)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-white/90">157</span>
+<span class="material-symbols-outlined text-white/90 text-[20px] transition-transform duration-300 chevron-icon">chevron_right</span>
+</div>
+</summary>
+<div class="flex flex-col gap-2">
+<details class="group/sub w-full" open="">
+<summary class="list-none [&amp;::-webkit-details-marker]:hidden flex items-center gap-3 ml-4 pl-5 pr-5 py-4 bg-gradient-to-r from-[#E5EBF2] to-white dark:from-slate-800/50 dark:to-slate-900/50 backdrop-blur-md rounded-l-2xl rounded-r-none transition-colors cursor-pointer select-none">
+<div class="flex-1 min-w-0">
+<span class="text-sm font-medium text-text-main dark:text-slate-300">HSK 4級</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-text-main/70 dark:text-slate-400/70">102</span>
+<span class="material-symbols-outlined text-icon-col text-[18px] transition-transform duration-300 chevron-icon">chevron_right</span>
+</div>
+</summary>
+<div class="flex flex-col gap-2 pt-2">
+<div class="group flex items-center gap-3 ml-8 pl-5 pr-5 py-4 bg-white dark:bg-slate-900/30 backdrop-blur-sm rounded-l-xl rounded-r-none border border-slate-100 dark:border-slate-800 transition-colors cursor-pointer select-none">
+<div class="flex-1 min-w-0">
+<span class="text-sm text-text-main dark:text-slate-400">第一章 (Chapter 1)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-text-main/70 dark:text-slate-400/70">50</span>
+<span class="material-symbols-outlined text-icon-col/70 text-[16px]">chevron_right</span>
+</div>
+</div>
+<div class="group flex items-center gap-3 ml-8 pl-5 pr-5 py-4 bg-white dark:bg-slate-900/30 backdrop-blur-sm rounded-l-xl rounded-r-none border border-slate-100 dark:border-slate-800 transition-colors cursor-pointer select-none">
+<div class="flex-1 min-w-0">
+<span class="text-sm text-text-main dark:text-slate-400">第二章 (Chapter 2)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-text-main/70 dark:text-slate-400/70">52</span>
+<span class="material-symbols-outlined text-icon-col/70 text-[16px]">chevron_right</span>
+</div>
+</div>
+</div>
+</details>
+<div class="group flex items-center gap-3 ml-4 pl-5 pr-5 py-4 bg-gradient-to-r from-[#E5EBF2] to-white dark:from-slate-800/50 dark:to-slate-900/50 backdrop-blur-md rounded-l-2xl rounded-r-none transition-colors cursor-pointer select-none">
+<div class="flex-1 min-w-0">
+<span class="text-sm font-medium text-text-main dark:text-slate-300">日常会話</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-text-main/70 dark:text-slate-400/70">55</span>
+<span class="material-symbols-outlined text-icon-col text-[18px]">chevron_right</span>
+</div>
+</div>
+</div>
+</details>
+<details class="group">
+<summary class="flex items-center gap-3 px-5 py-5 bg-white/80 dark:bg-slate-900/40 backdrop-blur-sm rounded-l-3xl rounded-r-none shadow-[0_0_8px_1px_#E5EBF2] dark:shadow-none active:scale-[0.98] transition-all cursor-pointer dark:border dark:border-slate-800 select-none">
+<div class="flex-1 min-w-0">
+<span class="text-base font-medium text-text-main dark:text-slate-200">仕事用</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-text-main/70 dark:text-slate-400/70">30</span>
+<span class="material-symbols-outlined text-icon-col text-[20px] transition-transform duration-300 chevron-icon">chevron_right</span>
+</div>
+</summary>
+<div class="py-2"></div>
+</details>
+<details class="group">
+<summary class="flex items-center gap-3 px-5 py-5 bg-white/80 dark:bg-slate-900/40 backdrop-blur-sm rounded-l-3xl rounded-r-none shadow-[0_0_8px_1px_#E5EBF2] dark:shadow-none active:scale-[0.98] transition-all cursor-pointer dark:border dark:border-slate-800 select-none">
+<div class="flex-1 min-w-0">
+<span class="text-base font-medium text-text-main dark:text-slate-200">旅行 (Travel)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-text-main/70 dark:text-slate-400/70">0</span>
+<span class="material-symbols-outlined text-icon-col text-[20px] transition-transform duration-300 chevron-icon">chevron_right</span>
+</div>
+</summary>
+<div class="py-2"></div>
+</details>
+</div>
+<div class="mt-8 mb-4 flex justify-center">
+<p class="text-[10px] text-slate-400 font-medium">総単語数: 649</p>
+</div>
+</main>
+<div class="absolute bottom-0 z-30 w-full pointer-events-none">
+<div class="flex items-center justify-between px-4 pb-8 pt-4">
+<div class="flex items-center justify-start w-10">
+<button class="w-10 h-10 flex items-center justify-center rounded-full pointer-events-auto transition-transform active:scale-90 p-1">
+<span class="material-symbols-outlined text-[28px] text-selected">home</span>
+</button>
+</div>
+<div class="flex items-center justify-center flex-1">
+<button class="w-10 h-10 flex items-center justify-center rounded-full pointer-events-auto transition-transform active:scale-90 p-1">
+<span class="material-symbols-outlined text-[28px] text-text-sub">search</span>
+</button>
+</div>
+<div class="flex items-center justify-end w-10">
+<button class="w-10 h-10 flex items-center justify-center rounded-full pointer-events-auto transition-transform active:scale-90 p-1">
+<span class="material-symbols-outlined text-[28px] text-text-sub">style</span>
+</button>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="hidden relative z-50" id="interaction-overlays">
+<div class="fixed inset-0 bg-slate-900/20 dark:bg-black/50 backdrop-blur-[2px] transition-opacity"></div>
+<div class="fixed inset-x-0 bottom-0 z-[60] w-full max-w-md mx-auto">
+<div class="m-4 mb-2 overflow-hidden bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl rounded-2xl shadow-sheet">
+<div class="px-4 py-3 border-b border-slate-200/50 dark:border-slate-700/50">
+<p class="text-xs font-medium text-center text-slate-400 truncate">英語学習 (English)</p>
+</div>
+<button class="w-full flex items-center justify-between px-5 py-4 text-left active:bg-slate-100 dark:active:bg-slate-700 transition-colors border-b border-slate-200/50 dark:border-slate-700/50">
+<span class="text-[17px] text-text-main dark:text-white">フォルダ名の変更</span>
+<span class="material-symbols-outlined text-slate-400 text-[20px]">edit</span>
+</button>
+<button class="w-full flex items-center justify-between px-5 py-4 text-left active:bg-slate-100 dark:active:bg-slate-700 transition-colors">
+<span class="text-[17px] text-danger">フォルダ削除</span>
+<span class="material-symbols-outlined text-danger text-[20px]">delete</span>
+</button>
+</div>
+<div class="m-4 mt-0">
+<button class="w-full py-4 bg-white dark:bg-slate-800 rounded-2xl text-[17px] font-semibold text-selected shadow-sm active:scale-[0.98] transition-transform">
+                        キャンセル
+                    </button>
+</div>
+</div>
+<div class="hidden fixed inset-0 z-[70] flex items-center justify-center p-4">
+<div class="w-full max-w-[270px] bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl rounded-[14px] shadow-2xl text-center overflow-hidden">
+<div class="p-4 pb-2">
+<h3 class="text-[17px] font-semibold text-slate-900 dark:text-white mb-1">フォルダを削除しますか？</h3>
+<p class="text-[13px] text-slate-500 dark:text-slate-400 leading-snug">
+                            構造のみ削除され、単語は保持されます。
+                        </p>
+</div>
+<div class="flex border-t border-slate-300/50 dark:border-slate-600/50 mt-2">
+<button class="flex-1 py-3 text-[17px] text-selected font-normal border-r border-slate-300/50 dark:border-slate-600/50 active:bg-slate-100 dark:active:bg-slate-700">
+                            キャンセル
+                        </button>
+<button class="flex-1 py-3 text-[17px] text-danger font-semibold active:bg-slate-100 dark:active:bg-slate-700">
+                            削除
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>
